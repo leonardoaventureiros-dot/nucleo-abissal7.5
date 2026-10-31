@@ -1,0 +1,25 @@
+NÚCLEO ABISSAL — COMO PUBLICAR (GitHub + Render)
+
+1) Suba estes arquivos na RAIZ de um repositório do GitHub (todos juntos, na mesma pasta):
+   index.html, server.js, package.json, .gitignore
+
+2) No Render: New + > Web Service > conecte o repositório
+   - Runtime: Node
+   - Build Command: npm install
+   - Start Command: npm start
+   - Health Check Path (opcional): /health
+
+3) Quando terminar o deploy, abra a URL do Render (https://SEU-APP.onrender.com).
+   O jogo já abre apontando para o próprio servidor: MULTIPLAYER > CRIAR SALA.
+
+Se hospedar o index.html em outro lugar (ex.: GitHub Pages), edite no index.html:
+   const SERVER_URL='';   ->   const SERVER_URL='wss://SEU-APP.onrender.com';
+
+Obs.: no plano grátis do Render o servidor "dorme" após ~15 min sem uso; o primeiro acesso demora cerca de 1 minuto.
+
+CONTROLES NOVOS
+PC:     X agachar · E loja · C slide (3 cargas) · 1-7 armas · botão direito mira (Sniper: luneta)
+Mobile: botões AGACH., MIRA, LOJA e ⛶ (tela cheia) · empurre o analógico ao máximo para correr ·
+        o botão FOGO executa finalização quando houver alvo elegível mirado
+Todos os botões mobile podem ser movidos em: Menu > PERSONALIZAR CONTROLES MOBILE
+Opções > Sens. ao mirar (zoom), Sens. do toque e Contador de FPS.
